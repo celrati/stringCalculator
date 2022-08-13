@@ -9,12 +9,22 @@ public class StringCalculatorKata {
 
     int add(String numbers) {
 
-        String separator = ",\n";
-        if(StringUtils.isEmpty(numbers)){
+        String defaultSeparator = ",\n";
+        int startingPoint = 0;
+
+        if(!StringUtils.containsAny(numbers, "0123456789")){
             return 0;
         }
 
-        List<String> numbersList = Arrays.asList(StringUtils.split(numbers, separator));
+        if(numbers.length() > 4 && StringUtils.startsWith(numbers,"//")) {
+            defaultSeparator = String.valueOf(numbers.charAt(2)) + "\n";
+            startingPoint = 4;
+
+        }
+
+
+
+        List<String> numbersList = Arrays.asList(StringUtils.split(numbers.substring(startingPoint), defaultSeparator));
         Integer sum = numbersList.stream()
                 .map(num -> Integer.parseInt(num))
                 .reduce(0, (a, b) -> a + b);
