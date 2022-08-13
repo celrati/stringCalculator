@@ -23,6 +23,9 @@ class StringCalculatorKataTest {
         assertEquals(stringCalculatorKata.add("1,2"), 3);
         assertEquals(stringCalculatorKata.add("1,2,3"), 6);
 
+        assertEquals(stringCalculatorKata.add("1\n2,3"), 6);
+        assertEquals(stringCalculatorKata.add("1,\n"), 1);
+
 
 
     }

@@ -9,10 +9,11 @@ public class StringCalculatorKata {
 
     int add(String numbers) {
 
-        char separator = ',';
+        String separator = ",\n";
         if(StringUtils.isEmpty(numbers)){
             return 0;
         }
+
         List<String> numbersList = Arrays.asList(StringUtils.split(numbers, separator));
         Integer sum = numbersList.stream()
                 .map(num -> Integer.parseInt(num))
