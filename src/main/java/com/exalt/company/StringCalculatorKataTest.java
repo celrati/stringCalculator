@@ -44,7 +44,7 @@ class StringCalculatorKataTest {
     void testStep5WithException() {
         // step 5
         Throwable exception = assertThrows(UnsupportedOperationException.class, () -> stringCalculatorKata.add("//;\n1\n;-2;\n-4"));
-        assertEquals("-negative number !", exception.getMessage());
+        assertEquals("negatives not allowed", exception.getMessage());
 
 
     }

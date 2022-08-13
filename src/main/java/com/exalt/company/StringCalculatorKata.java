@@ -27,7 +27,7 @@ public class StringCalculatorKata {
                 .map(num -> {
                     Integer ret = Integer.parseInt(num);
                     if(ret < 0) {
-                        throw new UnsupportedOperationException("-negative number !");
+                        throw new UnsupportedOperationException("negatives not allowed");
                     }
                     return ret;
                 })
