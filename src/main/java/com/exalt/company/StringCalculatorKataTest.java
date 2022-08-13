@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
 class StringCalculatorKataTest {
@@ -16,7 +17,7 @@ class StringCalculatorKataTest {
     }
 
     @Test
-    void add() {
+    void testStep1234() {
 
         // step 1, 2
         assertEquals(stringCalculatorKata.add(""), 0);
@@ -37,10 +38,15 @@ class StringCalculatorKataTest {
         assertEquals(stringCalculatorKata.add("//!\n"), 0);
 
 
+    }
 
-
-
+    @Test
+    void testStep5WithException() {
+        // step 5
+        Throwable exception = assertThrows(UnsupportedOperationException.class, () -> stringCalculatorKata.add("//;\n1\n;-2;\n-4"));
+        assertEquals("-negative number !", exception.getMessage());
 
 
     }
+
 }

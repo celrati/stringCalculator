@@ -22,11 +22,15 @@ public class StringCalculatorKata {
 
         }
 
-
-
         List<String> numbersList = Arrays.asList(StringUtils.split(numbers.substring(startingPoint), defaultSeparator));
         Integer sum = numbersList.stream()
-                .map(num -> Integer.parseInt(num))
+                .map(num -> {
+                    Integer ret = Integer.parseInt(num);
+                    if(ret < 0) {
+                        throw new UnsupportedOperationException("-negative number !");
+                    }
+                    return ret;
+                })
                 .reduce(0, (a, b) -> a + b);
         return sum;
     }

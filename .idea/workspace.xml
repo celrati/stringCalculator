@@ -57,7 +57,7 @@
       <recent name="com.exalt.company" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.StringCalculatorKataTest.add">
+  <component name="RunManager" selected="JUnit.StringCalculatorKataTest.testStep5WithException">
     <configuration name="StringCalculatorKataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="string-calculator-kata" />
       <extension name="coverage">
@@ -89,8 +89,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StringCalculatorKataTest.testStep5WithException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="string-calculator-kata" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.exalt.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.exalt.company" />
+      <option name="MAIN_CLASS_NAME" value="com.exalt.company.StringCalculatorKataTest" />
+      <option name="METHOD_NAME" value="testStep5WithException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.StringCalculatorKataTest.testStep5WithException" />
         <item itemvalue="JUnit.StringCalculatorKataTest.add" />
         <item itemvalue="JUnit.StringCalculatorKataTest" />
       </list>
@@ -104,7 +121,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1660419914019</updated>
-      <workItem from="1660419915502" duration="3630000" />
+      <workItem from="1660419915502" duration="4669000" />
     </task>
     <servers />
   </component>
